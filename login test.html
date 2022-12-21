@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .login-form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background-color: #fff;
+            border: 1px solid #f0f0f0;
+        }
+
+        .login-form h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px 0;
+            background: #4caf50;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border - radius: 4px;
+            margin - bottom: 10px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function validateForm() {
+
+            var username = document.forms["myForm"]["username"].value; // Get the username from the form. It's in the "name" attribute of the input tag. 
+
+            var password = document.forms["myForm"]["password"].value; // Get the password from the form. It's in the "name" attribute of the input tag.
+
+            if (username == "admin" && password == "admin") { // Check if username and password match what we have stored in our system. In this case, it's admin/admin. You can change this to whatever you want.
+
+                window.location = "members_page.html"; // Redirect to members page if credentials are correct. Change this to whatever page you want them to go to after logging in successfully.
+
+                return false; // This is needed, or else the form will still submit and refresh the page, which would reset any variables you may have set on other pages, etc... So just leave it here! :)
+
+            } else { // Show error message if credentials don't match what we have stored in our system (in this case, admin/admin)
+
+                alert("Error! Wrong username or password!"); // You can change this message to whatever you want! :)
+
+                return false; // This is needed, or else the form will still submit and refresh the page, which would reset any variables you may have set on other pages, etc... So just leave it here! :)         
+
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="login-form"> <!-- Start of login form --> <!-- You can change class name if you want -->
+        <!-- Just make sure that you also change it in your CSS file -->
+        <!-- Also make sure that your HTML and CSS files are linked correctly -->
+        <!-- If they aren't linked correctly then your styling won't show up -->
+        <!-- Also make sure that your JavaScript file is linked correctly -->
+        <!-- If it isn't linked correctly then your JavaScript won't work -->
+        <!-- Make sure all of these things are done before asking for help with styling or functionality issues -->
+        <h3>Login</h3>
+        <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+             Username:<br /> <input type="text" name="username">
+             <br /> Password:<br /> <input type="password" name="password"><br /><br />
+             <button type="submit">Login</button><br /> 
+            </form>
+    </div><!-- End of login form -->
+</body>
+
+</html>
