@@ -18,7 +18,10 @@ How to get local copy:
 6. enter one of the current usernames and passwords for games
 
 Current list of passwords:
-         user | password     
+         user | password  
+         
 Fortnite: fortnite | 1234
+
 Sling Drift: sling | 1234
+
 2048: 2048 | 1234
